@@ -1,0 +1,181 @@
+ <body >
+
+ </body>
+<div class="container ">
+  <div class="col-md-8" id="content">
+               
+     <div>    
+        
+     
+
+
+      
+       <!-- <form class="form-inline" >
+                
+          <div class="form-group">
+                        <button mat-raised-button color="accent" (click)="OnProperty()" >Property Type</button>
+          </div>    
+         
+          <div class="form-group">
+                  <input (click)="onCard()" id="typeahead-format" placeholder="Keyword" type="text" 
+                  class="form-control"  />   
+          </div>
+          <div class="form-group">
+                  <input id="typeahead-format" (click)="OnCity()" placeholder="Enter Your City" type="text" 
+                  class="form-control" [(ngModel)]="model" name="city" [ngbTypeahead]="search"
+                  [resultFormatter]="formatter" />        
+          </div>
+          <div class="form-group">
+                <button mat-raised-button color="primary" (click)="OnSearch()">Search</button>
+          </div>
+       </form>
+      </div> -->
+
+      <ngb-tabset *ngIf="showtab">
+          <ngb-tab title="Rent">
+            <ng-template ngbTabContent>
+             
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab title="Buy">
+            <ng-template ngbTabTitle>  </ng-template>
+      
+          </ngb-tab>
+        </ngb-tabset>  
+
+      <form class="form-inline">
+                
+                   <div class="input-group">
+                       
+                     <span class="input-group-addon" (click)=OnType()>  Rent </span>
+                     <input type="text" class="form-control " 
+                     placeholder="   Enter any neighorhood, Feature, Zip Code" 
+                      >
+                     <!-- <span class="input-group-addon"  >Rent </span> -->
+                     <!-- <span class="input-group-addon"  >Search </span> -->
+                     
+                   </div>
+                 </form>
+
+                
+
+
+<!-- Property Type -->
+      <div class="col-md-9" *ngIf="property" >  
+        <div class="card card-body">
+                <h6 style="padding-top:11px"> RESIDENTIAL </h6> 
+                <div class="row">             
+              <div class="col-md-4">
+                        <mat-checkbox>Flat</mat-checkbox>
+              </div>
+              <div class="col-md-4">
+                        <mat-checkbox>House / Villa</mat-checkbox>
+              </div>  
+              <div class="col-md-4">
+                        <mat-checkbox>Plot / Land</mat-checkbox>
+              </div>
+        </div>
+                <h6 style="padding-top:11px"> COMMERCIAL </h6>                                                
+                <div class="row">             
+                        <div class="col-md-4">
+                                        <mat-checkbox>Office Space</mat-checkbox>
+                        </div>
+                        <div class="col-md-4">
+                                        <mat-checkbox>Shop / Showroom</mat-checkbox>
+                        </div>  
+                        <div class="col-md-4">
+                                        <mat-checkbox>Commercial Land</mat-checkbox>
+                        </div>
+                        <div class="col-md-4">
+                                <mat-checkbox>Warehouse / Godwon</mat-checkbox>
+                        </div>
+                        <div class="col-md-4">
+                                <mat-checkbox>Industrial Building</mat-checkbox>
+                        </div>  
+                        <div class="col-md-4">
+                                <mat-checkbox>Industrial Shed</mat-checkbox>
+                        </div>
+                  </div>
+                <h6 style="padding-top:11px"> OTHERS </h6>                                                
+                        <div class="row">             
+                        <div class="col-md-4">
+                                        <mat-checkbox>Agriculture Land</mat-checkbox>
+                        </div>
+                        <div class="col-md-4">
+                                        <mat-checkbox>Farm House</mat-checkbox>
+                        </div>  
+                               
+                </div>
+         </div>
+     </div>
+ <div>                         
+<!-- End of Property Type -->
+   
+   <!-- Advance Search  -->
+      <form class="form-inline" *ngIf="show" >
+         <!-- <div class="card card-body"  > -->
+              <div class="row">
+                      <div class="col-md-4">
+                               <div class="form-group">
+                                      <h6 style="padding-top:11px"> Location </h6>
+                                      <input id="typeahead-format1"   id="text1" type="text" 
+                                      class="form-control"  />   
+                              </div>
+                      </div>
+                      <div class="col-md-4">
+                              <div class="form-group">
+                                        <mat-form-field>
+                                                        <mat-select placeholder="Ownership Type" [formControl]="toppings" multiple>
+                                                          <mat-select-trigger>
+                                                            {{toppings.value ? toppings.value[0] : ''}}
+                                                            <span *ngIf="toppings.value?.length > 1" class="example-additional-selection">
+                                                              (+{{toppings.value.length - 1}} others)
+                                                            </span>
+                                                          </mat-select-trigger>
+                                                          <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+                                                        </mat-select>
+                                 </mat-form-field>      
+                               </div>
+                      </div>
+                      <div class="col-md-4">
+                                      <div class="form-group">
+                                              <form class="range-field">
+                                                        <h6 style="padding-top:11px"> Price Range </h6>
+                                                        <mat-slider>  </mat-slider>
+                                                        
+                                                </form>
+                                              </div> 
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                                <h6 style="padding-top:11px"> Area size (sqft) </h6>
+                                <mat-slider></mat-slider>
+                        </div>
+                      </div>
+                      
+
+                      <div class="col-md-4">
+                        <div class="form-group">
+                                <h6 style="padding-top:11px"> Min. Bedrooms </h6> <br>
+                                <ngb-pagination [collectionSize]="50" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
+                                
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                                <h6 style="padding-top:11px"> Min. Bathrooms </h6> <br> 
+                                <ngb-pagination  [collectionSize]="50" [(page)]="currentPage"></ngb-pagination>
+                        </div>  
+                      </div>
+
+                      </div> 
+                                 <button mat-raised-button color="primary" (click)="OnSearch()" >Search</button> 
+                                
+                                  <button mat-raised-button color="accent" (click)="onCancel()">Cancel</button>                                 
+                 <!-- </div> -->
+        </form>
+       <!-- End Of Advance Search  -->
+      </div>
+    </div>
+ </div>
+ 
