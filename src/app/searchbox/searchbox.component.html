@@ -5,11 +5,6 @@
   <div class="col-md-8" id="content">
                
      <div>    
-        
-     
-
-
-      
        <!-- <form class="form-inline" >
                 
           <div class="form-group">
@@ -31,26 +26,38 @@
        </form>
       </div> -->
 
-      <ngb-tabset *ngIf="showtab">
-          <ngb-tab title="Rent">
-            <ng-template ngbTabContent>
-             
+      <!-- <ngb-tabset *ngIf="showtab" >
+          <ngb-tab title="RENT" (click)="increment()" >  
+            <ng-template ngbTabContent >
+               
             </ng-template>
           </ngb-tab>
-          <ngb-tab title="Buy">
+          <ngb-tab title="BUY">
             <ng-template ngbTabTitle>  </ng-template>
-      
+            {{count}}
           </ngb-tab>
-        </ngb-tabset>  
-
-      <form class="form-inline">
+        </ngb-tabset>   -->
+        <!-- <input type="text" [(ngModel)]='name'> {{name}} -->
+        <ul class="nav nav-tabs" *ngIf="showtab">
+        
+                  <li class="nav-item">
+                      <a class="nav-link" (click)="increment()">RENT</a>
+                    </li>
+              
+                    <li class="nav-item">
+                        <a class="nav-link" (click)="onBuy()">BUY</a>
+                      </li>
+           
+            
+            
+          </ul>
+      <form class="form-inline cntr">
                 
                    <div class="input-group">
-                       
-                     <span class="input-group-addon" (click)=OnType()>  Rent </span>
-                     <input type="text" class="form-control " 
+                     <span class="input-group-addon" (click)=OnType() > {{count}}  </span>
+                     <input type="text" class="form-control " (click)="onCard()"
                      placeholder="   Enter any neighorhood, Feature, Zip Code" 
-                      >
+                      > 
                      <!-- <span class="input-group-addon"  >Rent </span> -->
                      <!-- <span class="input-group-addon"  >Search </span> -->
                      
@@ -113,16 +120,18 @@
    
    <!-- Advance Search  -->
       <form class="form-inline" *ngIf="show" >
-         <!-- <div class="card card-body"  > -->
+          <div class="col-md-12">
+         <div class="card card-body crd">
               <div class="row">
-                      <div class="col-md-4">
+               
+                      <div class="col-md-6">
                                <div class="form-group">
                                       <h6 style="padding-top:11px"> Location </h6>
                                       <input id="typeahead-format1"   id="text1" type="text" 
                                       class="form-control"  />   
                               </div>
                       </div>
-                      <div class="col-md-4">
+                      <div class="col-md-6">
                               <div class="form-group">
                                         <mat-form-field>
                                                         <mat-select placeholder="Ownership Type" [formControl]="toppings" multiple>
@@ -137,7 +146,7 @@
                                  </mat-form-field>      
                                </div>
                       </div>
-                      <div class="col-md-4">
+                      <div class="col-md-6">
                                       <div class="form-group">
                                               <form class="range-field">
                                                         <h6 style="padding-top:11px"> Price Range </h6>
@@ -146,7 +155,7 @@
                                                 </form>
                                               </div> 
                       </div>
-                      <div class="col-md-4">
+                      <div class="col-md-6">
                         <div class="form-group">
                                 <h6 style="padding-top:11px"> Area size (sqft) </h6>
                                 <mat-slider></mat-slider>
@@ -154,27 +163,29 @@
                       </div>
                       
 
-                      <div class="col-md-4">
+                      <div class="col-md-6">
                         <div class="form-group">
                                 <h6 style="padding-top:11px"> Min. Bedrooms </h6> <br>
-                                <ngb-pagination [collectionSize]="50" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
+                                <ngb-pagination [collectionSize]="40" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
                                 
                         </div>
                       </div>
-                      <div class="col-md-4">
+                      <div class="col-md-6">
                         <div class="form-group">
                                 <h6 style="padding-top:11px"> Min. Bathrooms </h6> <br> 
-                                <ngb-pagination  [collectionSize]="50" [(page)]="currentPage"></ngb-pagination>
+                                <ngb-pagination  [collectionSize]="40" [(page)]="currentPage"></ngb-pagination>
                         </div>  
                       </div>
-
-                      </div> 
-                                 <button mat-raised-button color="primary" (click)="OnSearch()" >Search</button> 
-                                
-                                  <button mat-raised-button color="accent" (click)="onCancel()">Cancel</button>                                 
-                 <!-- </div> -->
+                   </div > 
+                   <div>
+                         <button mat-raised-button color="primary" (click)="OnSearch()" >Search</button> 
+                            <button mat-raised-button color="accent" (click)="onCancel()">Cancel</button>                                 
+                  </div>  
+              </div> 
+           </div>        
         </form>
        <!-- End Of Advance Search  -->
+     
       </div>
     </div>
  </div>

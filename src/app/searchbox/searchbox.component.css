@@ -4,7 +4,9 @@
 .form-inline .form-group {
     margin-right: 0.5rem;
         /* width: 200px; */
-
+}
+.navbar-expand-sm{
+    background-color: #1e0b9e;
 }
 /* @media (min-width: 576px) 
 .forms.scss:305
@@ -57,9 +59,7 @@ ngb-pagination{
     background-image: url("/assets/4.jpg");
     
     } */
-    .container{
-        /* opacity: 0.5; */
-    }
+  
     #content {
         /* width: 400px; */
         margin: 0 auto;
@@ -71,10 +71,10 @@ ngb-pagination{
    #text1{
         margin-top: -25px;
     }
-    ngb-tabset{
+    /* ngb-tabset{
         color: #111;
         background-color: #111;
-    }
+    } */
     /* .clrtb{
         color: #111;
         background-color: #111;
@@ -86,8 +86,50 @@ ngb-pagination{
         -ms-border-radius: 2px;
         -o-border-radius: 2px;
         border-radius: 39px;
-         
+        background-color: transparent;
+        color: white;
+        
      }
      .nav-tabs {
-        width: 128px;        
+        width: 138px;        
      }
+      .nav-tabs .nav-link.active, {
+        color: #f8f9fa;
+        /* background-color: #2c1199; */
+        border-color: rgb(206, 202, 203) #ebeff0 #edeef3;
+    }
+   
+    
+    
+
+     .crd {
+        border: 0;
+        width: 600px;
+        margin-left: 82px;
+        /* opacity: 1; */
+    }
+
+    .tp{
+        margin:35px;
+    }
+    .input-group .form-control{
+        border-top: 1px solid #ccc;
+        width: 600px;
+        background-color: #fff;
+     }
+    
+     .input-group-addon {
+        padding: 0.370rem 1.75rem;
+        margin-top: 3px;    
+        margin-bottom: 0;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.;
+        color: #f8f9fa;
+        background-color: #ffc107;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        cursor: pointer;
+    }
+    
+    
