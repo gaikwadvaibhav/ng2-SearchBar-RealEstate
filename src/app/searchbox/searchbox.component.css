@@ -107,6 +107,7 @@ ngb-pagination{
         width: 600px;
         margin-left: 82px;
         /* opacity: 1; */
+        background-color: grey;
     }
 
     .tp{
@@ -132,4 +133,35 @@ ngb-pagination{
         cursor: pointer;
     }
     
-    
+    .nouislider{
+        width: 50px;
+    }
+    .noUi-horizontal {
+        height: 5px;
+        width: 176px;
+        top: -12px;
+        
+    }
+    /* .noUi-target.noUi-ltr.noUi-horizontal.noUi-state-drag{
+        height: 5px;
+        width: 4px;
+    } */
+
+
+    .noUi-handle {
+      border-radius: 27px;
+        background: #124e9a;
+        box-shadow: 0 -19px 19px 2px rgba(0, 0, 0, 0.1);
+    }
+    .noUi-horizontal .noUi-handle:focus  {
+        width: 34px;
+        height: 28px;
+        left: -17px;
+        top: -12px;
+        cursor: pointer;
+      outline: none;
+    } 
+
+    /* .bgc{
+        background-color: blue; //onclick change color
+    } */

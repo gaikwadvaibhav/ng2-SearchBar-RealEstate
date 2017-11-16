@@ -28,42 +28,40 @@ export class SearchboxComponent implements OnInit {
 
     showtab=false;
 
-  public model: any;
+  public model: any; 
+
   show=false;
   
   page = 1;
   currentPage= 1;
   
   property= false;
-  
-  rent = true;
-   @Input() 
-   count = 'RENT';
-   
- 
-  @Output() 
-  countChange: EventEmitter<String>;
 
+  // bgclr:boolean;
+  
+  doubleSlider1 = [80, 80];
+   doubleSlider = [70, 70];
+   state_default: boolean = true;
+
+  rent;
+  buy;
+ 
   constructor() {
-    this.countChange = new EventEmitter<String>();
+     this.rent ='RENT'; 
  }
 
-  increment() {
-    this.countChange.emit( );
-    this.countChange.emit(this.count);
-   
-    console.log(this.count);
-    
-  }
+//  Onpagination(){
+// this.bgclr=true;   // onclick change color
+//  }
+  onRent() {
+    this.rent ='RENT';
+  this.buy = null;
+  
+ }
   
   onBuy() {
-    console.log("increament");
-    
-    // this.count++;
-    // this.countChange.emit(this.count);
-    this.countChange.emit(this.count);
-    console.log(this.count);
-    
+    this.buy =' BUY ';
+    this.rent = null;
   }
 
 
@@ -77,11 +75,14 @@ export class SearchboxComponent implements OnInit {
 
   OnType(){
     this.showtab = !this.showtab;
+    this.show = false;
   }
 
   onCard(){
     this.show=!this.show;
     // this.property=false;
+    this.showtab=false;
+    
   }
   onCancel(){
     this.show=false;

@@ -3,7 +3,8 @@
  </body>
 <div class="container ">
   <div class="col-md-8" id="content">
-               
+            
+     
      <div>    
        <!-- <form class="form-inline" >
                 
@@ -41,7 +42,7 @@
         <ul class="nav nav-tabs" *ngIf="showtab">
         
                   <li class="nav-item">
-                      <a class="nav-link" (click)="increment()">RENT</a>
+                      <a class="nav-link" (click)="onRent()"  >RENT</a>
                     </li>
               
                     <li class="nav-item">
@@ -54,7 +55,7 @@
       <form class="form-inline cntr">
                 
                    <div class="input-group">
-                     <span class="input-group-addon" (click)=OnType() > {{count}}  </span>
+                     <span class="input-group-addon" (click)=OnType() > {{rent}} {{buy}} </span>
                      <input type="text" class="form-control " (click)="onCard()"
                      placeholder="   Enter any neighorhood, Feature, Zip Code" 
                       > 
@@ -123,7 +124,7 @@
           <div class="col-md-12">
          <div class="card card-body crd">
               <div class="row">
-               
+                  
                       <div class="col-md-6">
                                <div class="form-group">
                                       <h6 style="padding-top:11px"> Location </h6>
@@ -150,24 +151,42 @@
                                       <div class="form-group">
                                               <form class="range-field">
                                                         <h6 style="padding-top:11px"> Price Range </h6>
-                                                        <mat-slider>  </mat-slider>
+                                                        <br>
+                                                           <nouislider class="slider slider-primary" name="slide" [connect]="true" [min]="0" [max]="100" [step]="1" [(ngModel)]="doubleSlider" [tooltips]="true"></nouislider>
+                                                        
                                                         
                                                 </form>
                                               </div> 
                       </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                                <h6 style="padding-top:11px"> Area size (sqft) </h6>
-                                <mat-slider></mat-slider>
-                        </div>
-                      </div>
-                      
 
                       <div class="col-md-6">
+                          <div class="form-group">
+                                  <form class="range-field">
+                                            <h6 style="padding-top:11px"> Area size (sqft</h6>
+                                            <br>
+                                            <nouislider class="slider slider-primary" name="slide" [connect]="true" [min]="0" [max]="100" [step]="1" [(ngModel)]="doubleSlider1" [tooltips]="true"></nouislider>
+                                            
+                                            
+                                    </form>
+                                  </div> 
+          </div>
+
+
+
+<!-- 
+                      <div class="col-md-6">
+                        <div class="form-group">
+                                <h6 style="padding-top:11px"> Area size (sqft) </h6> 
+                                <br>
+                                 <nouislider class="slider slider-primary" name="slide" [connect]="true" [min]="0" [max]="100" [step]="1" [(ngModel)]="doubleSlider1" [tooltips]="true"></nouislider>
+                                
+                        </div>
+                      </div> -->
+                   <div class="col-md-6">
                         <div class="form-group">
                                 <h6 style="padding-top:11px"> Min. Bedrooms </h6> <br>
                                 <ngb-pagination [collectionSize]="40" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
-                                
+                                <!-- (click)="Onpagination()" [ngClass]="{'bgc': bgclr}"  //onclick change color -->
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -178,6 +197,7 @@
                       </div>
                    </div > 
                    <div>
+                      
                          <button mat-raised-button color="primary" (click)="OnSearch()" >Search</button> 
                             <button mat-raised-button color="accent" (click)="onCancel()">Cancel</button>                                 
                   </div>  
@@ -190,3 +210,8 @@
     </div>
  </div>
  
+
+
+  <br>
+
+  

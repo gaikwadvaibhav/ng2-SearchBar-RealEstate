@@ -15,6 +15,8 @@ import {MatStepperModule} from '@angular/material';
 import {MatInputModule} from '@angular/material';
 import {MatRadioModule} from '@angular/material';
 
+import { NouisliderModule } from 'ng2-nouislider';
+
 
 
 
@@ -59,7 +61,8 @@ import { LoginServiceService } from './login/login-service.service';
     MatStepperModule,
     MatFormFieldModule,
     MatInputModule,
-    MatRadioModule
+    MatRadioModule,
+    NouisliderModule
 
     
   ],
