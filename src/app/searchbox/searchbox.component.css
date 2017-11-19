@@ -40,8 +40,9 @@ mat-slider {
     transition: all .3s;
 } */
 
-ngb-pagination{
+.ngb-pagination{
     margin-top: 10px;
+ 
 }
 .example-additional-selection {
     opacity: 0.75;
@@ -107,7 +108,7 @@ ngb-pagination{
         width: 600px;
         margin-left: 82px;
         /* opacity: 1; */
-        background-color: grey;
+        background-color: #faf8f8;;
     }
 
     .tp{
@@ -142,12 +143,6 @@ ngb-pagination{
         top: -12px;
         
     }
-    /* .noUi-target.noUi-ltr.noUi-horizontal.noUi-state-drag{
-        height: 5px;
-        width: 4px;
-    } */
-
-
     .noUi-handle {
       border-radius: 27px;
         background: #124e9a;
@@ -158,10 +153,6 @@ ngb-pagination{
         height: 28px;
         left: -17px;
         top: -12px;
-        cursor: pointer;
+        /* cursor: pointer; */
       outline: none;
     } 
-
-    /* .bgc{
-        background-color: blue; //onclick change color
-    } */

@@ -32,6 +32,9 @@ import { ToppropertyComponent } from './topproperty/topproperty.component';
 import { RegisterUserService } from './register/register-user.service';
 import { HttpModule } from '@angular/http';
 import { LoginServiceService } from './login/login-service.service';
+import { AddPropertyComponent } from './add-property/add-property.component';
+import { SlideCardsComponent } from './slide-cards/slide-cards.component';
+import { PropertySerService } from './add-property/property-ser.service';
 
 
 
@@ -45,7 +48,9 @@ import { LoginServiceService } from './login/login-service.service';
     HomeComponent,
     SearchboxComponent,
     SubmitpropertyComponent,
-    ToppropertyComponent
+    ToppropertyComponent,
+    AddPropertyComponent,
+    SlideCardsComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +71,7 @@ import { LoginServiceService } from './login/login-service.service';
 
     
   ],
-  providers: [RegisterUserService, LoginServiceService],
+  providers: [RegisterUserService, LoginServiceService,PropertySerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

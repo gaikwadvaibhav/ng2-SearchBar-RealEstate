@@ -1,0 +1,618 @@
+ <br>
+ <div>
+    <h5> Submit Your Property</h5>
+    <p>Praesent commodo cursus magnavel sceleris quenisl consecte turet </p>
+ </div>
+ 
+<!-- <div class="centered" >
+<ngb-tabset class="centered" >
+  <ngb-tab class="smt" title="1" id="one">
+      <div style="margin-left:50%">
+     <ng-template ngbTabContent>
+        <div class="col-md-7 crdmrgin  ">
+           
+          <div class="card">
+               <div class="card-body"  >
+                        <h5 class="card-title "> 
+                        <b> Contact Informtion </b> <br> 
+                        </h5>
+                        <p > Please enter your detail </p>
+                     <div>
+                        <mat-form-field>  
+                            <mat-select  placeholder="Property Posted By" name="propertypostedby"  ngModel>
+                            <mat-option  name="owner" value="Owner" ngDefaultControl>Owner</mat-option >
+                            <mat-option  name="builder" value="Builder" ngDefaultControl>Builder</mat-option>
+                            <mat-option  name="dealer" value="Dealer" ngDefaultControl>Dealer</mat-option>                   
+                            </mat-select>
+                        </mat-form-field>
+
+                          <mat-form-field>
+                            <input matInput placeholder="Full name"> 
+                          </mat-form-field>
+                               
+
+                          <mat-form-field>
+                              <input matInput placeholder="Email">
+                            </mat-form-field>
+                            <mat-form-field>
+                              <input matInput placeholder="Mobile">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="Orangnization name">
+                              </mat-form-field>
+                              <mat-form-field>
+                                  <textarea matInput placeholder="About Builder" name="aboutbuilder"  ngModel></textarea>
+                              </mat-form-field>
+                             
+
+                        </div>
+               </div>
+            </div>
+
+            <button mat-fab class="btncenter" color="primary" title="2" > NEXT </button>                              
+        </div>
+        
+    </ng-template>
+        </div>
+  </ngb-tab> 
+
+<ngb-tab class="smt" title="2">
+    <ng-template ngbTabContent>
+       <div class="col-md-8 crdmrgin  ">
+            <div class="card">
+                 <div class="card-body"  >
+                        <h5 class="card-title "> 
+                        <b> Property Location </b> <br> 
+                        </h5>
+                        <p > Please enter your Property Location and Information </p>
+                        <div class="example-container ">
+                            <mat-form-field>
+                                    <input matInput placeholder="Property Name" name="propertyname"  ngModel>
+                            </mat-form-field>
+                            <mat-form-field>
+                                    <mat-select placeholder="Property Type" name="propertytype"  ngModel>
+                                      <mat-option name="residential"   value="residential" ngDefaultControl>Residential Apartment</mat-option>
+                                      <mat-option name="commercial"   value="commercial" ngDefaultControl>Commercial Apartment</mat-option>
+                                      <mat-option name="other"  value="other" ngDefaultControl>Other</mat-option>                   
+                                    </mat-select>
+                          </mat-form-field>
+                          <mat-form-field>
+                                <textarea matInput placeholder="About Property" name="aboutproperty" ngModel></textarea>
+                              </mat-form-field>
+
+                              
+                              <mat-form-field>
+                                    <input matInput placeholder="State" name="state" ngModel>
+                                  </mat-form-field>
+                          
+                                 <mat-form-field>
+                                    <input matInput placeholder="City" name="city" ngModel [ngModelOptions]="{standalone: true}">
+                                  </mat-form-field>
+                             
+                                <mat-form-field>
+                                    <input matInput placeholder="Locality"   name="locality" ngModel>
+                                  </mat-form-field>
+                             
+                                <mat-form-field>
+                                    <input matInput placeholder="Address"   name="address" ngModel>
+                                  </mat-form-field>
+
+
+ 
+                        </div>
+                  </div>
+            </div>
+           <button mat-fab class="btncenter" color="primary"  > NEXT </button>                              
+        </div>
+    </ng-template>
+ </ngb-tab>
+
+  
+<ngb-tab class="smt" title="3">
+    <ng-template ngbTabContent>
+       <div class="col-md-8 crdmrgin  ">
+            <div class="card">
+                 <div class="card-body"  >
+                        <h5 class="card-title "> 
+                        <b> Property Information </b> <br> 
+                        </h5>
+                        <p > Please enter your Property detail </p>
+                        <div class="example-container ">
+                                <mat-form-field>
+                                        <mat-select placeholder="Select Property  to Add " name=" selectaddproperty" ngModel>
+                                          <mat-option name="1rk"   value="1rk" ngDefaultControl>1 RK</mat-option>
+                                          <mat-option name="1bhk"   value="1bhk" ngDefaultControl>1 BHK</mat-option>
+                                          <mat-option name="2bhk"   value="2bhk" ngDefaultControl>2 BHK</mat-option>   
+                                          <mat-option name="3bhk"   value="3bhk" ngDefaultControl>3 BHK</mat-option>   
+                                          <mat-option name="4bhk"   value="4bhk" ngDefaultControl>4 BHK</mat-option> 
+                                          <mat-option name="5bhk"   value="5bhk" ngDefaultControl>5+ BHK</mat-option> 
+                                        </mat-select>
+                              </mat-form-field>
+
+                              <div style="text-align:center"> 
+                                    <b>Add 1 BHK Detail</b> 
+                              </div>
+
+                              <mat-form-field>
+                                    <input matInput placeholder="No. of Flats" name="noofflats" ngModel>
+                                  </mat-form-field>
+                                  <mat-form-field>
+                                        <mat-select placeholder="Available For" name="availablefor" ngModel>
+                                          <mat-option  name="rent"   value="rent" ngDefaultControl>Rent</mat-option>
+                                          <mat-option name="buy"   value="buy" ngDefaultControl>Buy</mat-option>
+                                        </mat-select>
+                              </mat-form-field>
+                              <mat-form-field>
+                                    <input matInput placeholder="Average Area (sqft)" name="averagearea" ngModel>
+                                  </mat-form-field>
+                                  <mat-form-field>
+                                        <input matInput placeholder="Starting Price (Rs.)" name="startingprice" ngModel>
+                                      </mat-form-field>
+    
+                                <mat-form-field>
+                                    <input matInput placeholder="Project total tower" name="projectTotalTower" ngModel>   
+                                </mat-form-field>
+                            
+                                <mat-form-field>
+                                    <input matInput placeholder="Project total units" name="projectTotalUnit" ngModel>
+                                </mat-form-field>
+                                <mat-form-field>
+                                    <input matInput placeholder="Project available units" name="projectAvailableUnit" ngModel>
+                                </mat-form-field>
+                            
+                                <mat-form-field>
+                                    <input matInput placeholder="Project launch Date" name="projectLaunchDate" ngModel>
+                                </mat-form-field>
+
+
+
+                                      
+                             
+                        </div>
+                  </div>
+            </div>
+           <button mat-fab class="btncenter" color="primary"  > NEXT </button>                              
+        </div>
+    </ng-template>
+ </ngb-tab>
+
+
+
+<ngb-tab class="smt" title="4">
+    <ng-template ngbTabContent>
+       <div class="col-md-8 crdmrgin  ">
+            <div class="card">
+                 <div class="card-body"  >
+                        <h5 class="card-title "> 
+                        <b> Property Informtion </b> <br> 
+                        </h5>
+                        <p > Please enter your Property detail </p>
+                        <div class="example-container ">
+                            
+
+
+                         <div class="row">
+                                <div class="col-md-4">
+                                <mat-form-field>
+                                    <input matInput placeholder="Covered Area" name="coveredArea" ngModel >
+                                  </mat-form-field>
+                            </div>
+                            <div class="col-md-2">      
+                               <mat-form-field>
+                                           <mat-select placeholder="Area unit" name="areaUnit" ngModel>
+                                             <mat-option value="sqft" name="areaUnit1"   ngDefaultControl> sqft</mat-option>
+                                             <mat-option value="sqyard" name="areaUnit2"   ngDefaultControl>sqyard</mat-option>
+                                             <mat-option value="sqm" name="areaUnit3"   ngDefaultControl>sqm</mat-option>
+                                           </mat-select>
+                                 </mat-form-field>
+                           </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <mat-form-field>
+                                    <input matInput placeholder="Plot Area" name="plotArea" ngModel >
+                                  </mat-form-field>
+                            </div>
+                            <div class="col-md-2">      
+                               <mat-form-field>
+                                           <mat-select placeholder="Area unit" name="areaUnit" ngModel>
+                                                 <mat-option value="sqft" name="areaUnit1"   ngDefaultControl> sqft</mat-option>
+                                                 <mat-option value="sqyard" name="areaUnit2"   ngDefaultControl>sqyard</mat-option>
+                                                 <mat-option value="sqm" name="areaUnit3"   ngDefaultControl>sqm</mat-option>
+                                           </mat-select>
+                                 </mat-form-field>
+                           </div>
+                        </div>
+                    </div>
+                        
+                        <div class="row">
+                            <div class="col-md-4">
+                                <mat-form-field>
+                                    <input matInput placeholder="Carpet Area" name="carpetArea">
+                                  </mat-form-field>
+                            </div>
+                            <div class="col-md-2">      
+                               <mat-form-field>
+                                           <mat-select placeholder="Area unit" name="areaUnit" ngModel>
+                                                 <mat-option value="sqft" name="areaUnit1"   ngDefaultControl> sqft</mat-option>
+                                                 <mat-option value="sqyard" name="areaUnit2"   ngDefaultControl>sqyard</mat-option>
+                                                 <mat-option value="sqm" name="areaUnit3"   ngDefaultControl>sqm</mat-option>
+                                           </mat-select>
+                                 </mat-form-field>
+                           </div>
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <input matInput placeholder="Plot Lenght (sqft)" name="plotLenght" ngModel>
+                                  </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-md-6">
+                               <mat-form-field>
+                                   <input matInput placeholder="Price per (sqft)" name="pricePerSqft" ngModel>
+                                 </mat-form-field>
+                           </div>
+                           <div class="col-md-6">
+                               <mat-form-field>
+                                   <input matInput placeholder="Plot Breadth (sqft)" name="plotBreadth" ngModel >
+                                 </mat-form-field>
+                           </div>
+
+
+
+
+
+
+                        </div>
+                  </div>
+              </div>
+           <button mat-fab class="btncenter" color="primary"  > NEXT </button>                              
+        </div>
+    </ng-template></ngb-tab>
+<ngb-tab class="smt" title="5">
+    <ng-template ngbTabContent>
+      <p>  default  customized.</p>
+    </ng-template>
+  </ngb-tab></ngb-tabset>
+</div> -->
+
+
+
+
+
+<div class="container">
+    <div class="row" style="padding-bottom: 41px;text-align: -webkit-center;">
+        
+       <div class="col-md-4">           
+ 
+        </div>
+       <div class="col-md-4">
+           <div class="row">
+                <div class="col-md-2">
+                    <div class="card crd" [ngClass]="{'crdActive':one}">
+                       <p class="pdding"> 1 </p>     
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card crd" [ngClass]="{'crdActive':two}">
+                        <p class="pdding">2</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card crd" [ngClass]="{'crdActive':three}">
+                        <p class="pdding">3</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card crd" [ngClass]="{'crdActive':four}">
+                        <p class="pdding">4</p>
+                    </div> 
+                </div>
+                <div class="col-md-2">
+                    <div class="card crd" [ngClass]="{'crdActive':five}">
+                        <p class="pdding">5</p>  
+                    </div> 
+                </div>
+           </div>
+       </div>
+       <div class="col-md-4">
+           
+       </div>
+        
+    </div>
+    
+</div>
+
+<div class="row">
+<!-- <form> -->
+    <div class="col-md-3"></div>
+
+    <div class="col-md-6" *ngIf="one">
+        <div class="col-md-12">
+                <form #myForm1="ngForm">
+                        
+                <div class="card">
+                        <div class="card-body"  >
+                                 <h5 class="card-title "> 
+                                 <b> Contact Informtion </b> <br> 
+                                 </h5>
+                                 <p > Please enter your detail </p>
+                              <div>
+                                 <mat-form-field>  
+                                     <mat-select  class="setproper" placeholder="Property Posted By" name="propertyPostedby"  ngModel>
+                                     <mat-option  name="owner" value="Owner" ngDefaultControl>Owner</mat-option >
+                                     <mat-option  name="builder" value="Builder" ngDefaultControl>Builder</mat-option>
+                                     <mat-option  name="dealer" value="Dealer" ngDefaultControl>Dealer</mat-option>                   
+                                     </mat-select>
+                                 </mat-form-field>
+                                 <mat-form-field>
+                                     <input matInput placeholder="Full name" name="fullName"  ngModel> 
+                                   </mat-form-field>
+                                    <mat-form-field>
+                                       <input matInput placeholder="Email"  name="email"  ngModel>
+                                     </mat-form-field>
+                                     <mat-form-field>
+                                       <input matInput placeholder="Mobile" name="mobile"  ngModel>
+                                     </mat-form-field>
+                                     <mat-form-field>
+                                         <input matInput placeholder="Orangnization name" name="companyName"  ngModel>
+                                       </mat-form-field>
+                                       <mat-form-field>
+                                           <textarea matInput placeholder="About Builder" name="aboutBuilder"  ngModel></textarea>
+                                       </mat-form-field>
+                                   
+                                    </div>
+                        </div>
+                     </div>
+                     <button mat-fab class="btnclr" style="background-color: #2196F3;" (click)="onOne(myForm1)" > NEXT </button>                   
+                    </form>
+                    </div>
+    </div>
+
+    <div class="col-md-6" *ngIf="two">
+        <div class="col-md-12">
+            <form #myForm2="ngForm">
+                <div class="card">
+                        <div class="card-body"  >
+                               <h5 class="card-title "> 
+                               <b> Property Location </b> <br> 
+                               </h5>
+                               <p > Please enter your Property Location and Information </p>
+                               <div class="example-container ">
+                                   <mat-form-field>
+                                           <input matInput placeholder="Property Name" name="propertyName"  ngModel>
+                                   </mat-form-field>
+                                   <mat-form-field>
+                                           <mat-select placeholder="Property Type" name="propertyType"  ngModel>
+                                             <mat-option name="residential"   value="residential" ngDefaultControl>Residential Apartment</mat-option>
+                                             <mat-option name="commercial"   value="commercial" ngDefaultControl>Commercial Apartment</mat-option>
+                                             <mat-option name="other"  value="other" ngDefaultControl>Other</mat-option>                   
+                                           </mat-select>
+                                 </mat-form-field>
+                                 <mat-form-field>
+                                       <textarea matInput placeholder="About Property" name="aboutProperty" ngModel></textarea>
+                                     </mat-form-field>
+       
+                                     
+                                     <mat-form-field>
+                                           <input matInput placeholder="State" name="state" ngModel>
+                                         </mat-form-field>
+                                 
+                                        <mat-form-field>
+                                           <input matInput placeholder="City" name="city" ngModel>
+                                         </mat-form-field>
+                                    
+                                       <mat-form-field>
+                                           <input matInput placeholder="Locality"   name="locality" ngModel>
+                                         </mat-form-field>
+                                    
+                                       <mat-form-field>
+                                           <input matInput placeholder="Address"   name="address" ngModel>
+                                         </mat-form-field>
+                                </div>
+                         </div>
+                         
+                   </div>
+                   <button mat-fab  color="primary" style="background-color: #2196F3;" (click)="onTwo(myForm2)" > NEXT </button>                   
+            </form> 
+        </div>
+    </div>
+
+    <div class="col-md-6" *ngIf="three">
+        <div class="col-md-12">
+            <form #myForm3="ngForm">
+                <div class="card">
+                        <div class="card-body"  >
+                               <h5 class="card-title "> 
+                               <b> Property Information </b> <br> 
+                               </h5>
+                               <p > Please enter your Property detail </p>
+                               <div class="example-container ">
+                                       <mat-form-field>
+                                               <mat-select placeholder="Select Property  to Add " name=" selectAddProperty" ngModel>
+                                                 <mat-option name="1rk"   value="1rk" ngDefaultControl>1 RK</mat-option>
+                                                 <mat-option name="1bhk"   value="1bhk" ngDefaultControl>1 BHK</mat-option>
+                                                 <mat-option name="2bhk"   value="2bhk" ngDefaultControl>2 BHK</mat-option>   
+                                                 <mat-option name="3bhk"   value="3bhk" ngDefaultControl>3 BHK</mat-option>   
+                                                 <mat-option name="4bhk"   value="4bhk" ngDefaultControl>4 BHK</mat-option> 
+                                                 <mat-option name="5bhk"   value="5bhk" ngDefaultControl>5+ BHK</mat-option> 
+                                               </mat-select>
+                                     </mat-form-field>
+       
+                                     <div style="text-align:center"> 
+                                           <b>Add 1 BHK Detail</b> 
+                                     </div>
+       
+                                     <mat-form-field>
+                                           <input matInput placeholder="No. of Flats" name="noOfFlats" ngModel>
+                                         </mat-form-field>
+                                         <mat-form-field>
+                                               <mat-select placeholder="Available For" name="availableFor" ngModel>
+                                                 <mat-option  name="rent"   value="rent" ngDefaultControl>Rent</mat-option>
+                                                 <mat-option name="buy"   value="buy" ngDefaultControl>Buy</mat-option>
+                                               </mat-select>
+                                     </mat-form-field>
+                                     <mat-form-field>
+                                           <input matInput placeholder="Average Area (sqft)" name="averageArea" ngModel>
+                                         </mat-form-field>
+                                         <mat-form-field>
+                                               <input matInput placeholder="Starting Price (Rs.)" name="startingPrice" ngModel>
+                                             </mat-form-field>
+           
+                                       <mat-form-field>
+                                           <input matInput placeholder="Project total tower" name="projectTotalTower" ngModel>   
+                                       </mat-form-field>
+                                   
+                                       <mat-form-field>
+                                           <input matInput placeholder="Project total units" name="projectTotalUnit" ngModel>
+                                       </mat-form-field>
+                                       <mat-form-field>
+                                           <input matInput placeholder="Project available units" name="projectAvailableUnit" ngModel>
+                                       </mat-form-field>
+                                   
+                                       <mat-form-field>
+                                           <input matInput placeholder="Project launch Date" name="projectLaunchDate" ngModel>
+                                       </mat-form-field>
+                                </div>
+                         </div>
+                   </div>
+                   <button mat-fab  color="primary" style="background-color: #2196F3;" (click)="onThree(myForm3)" > NEXT </button>                   
+                </form>   
+        </div>
+    </div>
+
+    <div class="col-md-6" *ngIf="four">
+        <div class="col-md-12">
+            <form #myForm4="ngForm">
+                <div class="card">
+                        <div class="card-body"  >
+                               <h5 class="card-title "> 
+                               <b> Property Informtion 2</b> <br> 
+                               </h5>
+                               <p > Please enter your Property detail </p>
+                               <div class="example-container ">
+                                   
+       
+       
+                                <div class="row">
+                                       <div class="col-md-8">
+                                       <mat-form-field>
+                                           <input matInput placeholder="Covered Area" name="coveredArea" ngModel >
+                                         </mat-form-field>
+                                   </div>
+                                   <div class="col-md-4">      
+                                      <mat-form-field>
+                                                  <mat-select placeholder="Area unit" name="areaUnit" ngModel>
+                                                    <mat-option value="sqft" name="areaUnit1"   ngDefaultControl> sqft</mat-option>
+                                                    <mat-option value="sqyard" name="areaUnit2"   ngDefaultControl>sqyard</mat-option>
+                                                    <mat-option value="sqm" name="areaUnit3"   ngDefaultControl>sqm</mat-option>
+                                                  </mat-select>
+                                        </mat-form-field>
+                                  </div>
+                               </div>
+                               <div class="row">
+                                   <div class="col-md-8">
+                                       <mat-form-field>
+                                           <input matInput placeholder="Plot Area" name="plotArea" ngModel >
+                                         </mat-form-field>
+                                   </div>
+                                   <div class="col-md-4">      
+                                      <mat-form-field>
+                                                  <mat-select placeholder="Area unit" name="plotAreaUnit" ngModel>
+                                                        <mat-option value="sqft" name="areaUnit1"   ngDefaultControl> sqft</mat-option>
+                                                        <mat-option value="sqyard" name="areaUnit2"   ngDefaultControl>sqyard</mat-option>
+                                                        <mat-option value="sqm" name="areaUnit3"   ngDefaultControl>sqm</mat-option>
+                                                  </mat-select>
+                                        </mat-form-field>
+                                  </div>
+                               </div>
+                           </div>
+                               
+                               <div class="row">
+                                   <div class="col-md-8">
+                                       <mat-form-field>
+                                           <input matInput placeholder="Carpet Area" name="carpetArea">
+                                         </mat-form-field>
+                                   </div>
+                                   <div class="col-md-4">      
+                                      <mat-form-field>
+                                                  <mat-select placeholder="Area unit" name="carpetAreaUnit" ngModel>
+                                                        <mat-option value="sqft" name="areaUnit1"   ngDefaultControl> sqft</mat-option>
+                                                        <mat-option value="sqyard" name="areaUnit2"   ngDefaultControl>sqyard</mat-option>
+                                                        <mat-option value="sqm" name="areaUnit3"   ngDefaultControl>sqm</mat-option>
+                                                  </mat-select>
+                                        </mat-form-field>
+                                  </div>
+                                </div>
+                                        <mat-form-field>
+                                           <input matInput placeholder="Plot Lenght (sqft)" name="plotLenght" ngModel>
+                                         </mat-form-field>
+                               
+                              
+                                      <mat-form-field>
+                                          <input matInput placeholder="Price per (sqft)" name="pricePerSqft" ngModel>
+                                        </mat-form-field>
+                                 
+                                      <mat-form-field>
+                                          <input matInput placeholder="Plot Breadth (sqft)" name="plotBreadth" ngModel >
+                                        </mat-form-field>
+                                        <mat-form-field>
+                                                <mat-select placeholder="Age of property" name="ageOfProperty" ngModel>
+                                                  <mat-option name=yearOld1 value="0-1 Year">0-1 Year</mat-option>
+                                                  <mat-option name=yearOld2 value="2 Year">2 Year </mat-option>
+                                                  <mat-option name=yearOld3 value="3 Year">3 Year</mat-option>
+                                                  <mat-option name=yearOld4 value="4 Year">4 Year</mat-option>
+                                                  <mat-option name=yearOld5+ value="5+ Year">5+ Year</mat-option>
+                                                  <mat-option name=yearOld10+ value="10+ Year">10+ Year</mat-option>
+                                                  <mat-option name=yearOld20+ value="20+ Year">20+ Year</mat-option>                                                </mat-select>
+                                        </mat-form-field>
+                                        
+                                        <mat-form-field>
+                                                <input matInput placeholder="Project Available From Date" name="projectDate" ngModel>
+                                        </mat-form-field>
+                                         
+                                        <mat-radio-group>
+                                            <label> <b>  Transaction Type </b> </label>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                        <mat-radio-button value="1" name="newProperty" ngModel ngDefaultControl>New Property</mat-radio-button>                                                        
+                                                </div>
+                                                <div class="col-md-6">
+                                                        <mat-radio-button value="2" name="reSale" ngModel ngDefaultControl>Resale</mat-radio-button>                                                        
+                                                </div>
+                                            </div>
+                                        </mat-radio-group>
+                                                                                
+                                        <mat-radio-group>
+                                                <label> <b> Possession Status </b> </label> 
+                                                <div class="row">
+                                                <div class="col-md-6">
+                                                        <mat-radio-button value="1" name="readyToMove" ngModel ngDefaultControl>Ready to move </mat-radio-button> 
+                                                </div> 
+                                                <div class="col-md-6">
+                                                        <mat-radio-button value="2" name="underConstruction" ngModel ngDefaultControl>Under Construction</mat-radio-button>                                                    
+                                                </div>                                              
+                                            </div>
+                                         </mat-radio-group>
+                                     
+                                 </div>
+                             </div>
+                          <button mat-fab  color="primary"  style="background-color: #2196F3;" (click)="onFour(myForm4)" > NEXT </button>                                   
+                        </form>
+                        </div>
+                </div>
+
+   
+                <div class="col-md-6" *ngIf="five">
+        <div class="col-md-12">
+            <div class="card">
+                    <h1 class="page-header"> Success.</h1>
+                    
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3"></div>
+<!-- </form>     -->
+</div>
+

@@ -6,16 +6,18 @@ import { SearchboxComponent } from "./searchbox/searchbox.component";
 import { HomeComponent } from "./home/home.component";
 import { SubmitpropertyComponent } from "./submitproperty/submitproperty.component";
 import { ToppropertyComponent } from "./topproperty/topproperty.component";
+import { AddPropertyComponent } from './add-property/add-property.component';
 
 
 const routes: Routes = [
-    { path: '', redirectTo:'/home', pathMatch:'full' },
+    { path: '', redirectTo:'/addproperty', pathMatch:'full' },
     { path: 'home', component: HomeComponent }, 
     { path: 'search', component: SearchboxComponent },    
     { path: 'register', component: RegisterComponent },
     { path: 'login', component: LoginComponent },
     { path: 'topproperty', component: ToppropertyComponent},    
-    { path: 'submitproperty', component: SubmitpropertyComponent }
+    { path: 'submitproperty', component: SubmitpropertyComponent },
+    { path: 'addproperty', component: AddPropertyComponent}
     
     
     
