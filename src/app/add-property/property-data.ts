@@ -6,7 +6,7 @@ export class Property{
     companyName:string;
     aboutBuilder:string;
 
-    propertyTame:string;
+    propertyName:string;
     propertyType:string;
     aboutProperty:string;
     state:string;

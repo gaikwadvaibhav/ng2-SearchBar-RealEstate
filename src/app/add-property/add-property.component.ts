@@ -46,7 +46,16 @@ export class AddPropertyComponent implements OnInit {
     this.four=false;
     this.five=false;
     console.log(myForm2.value);
-   }
+    var property2: Property = new Property();
+    property2.propertyName = myForm2.value.propertyName;
+    property2.propertyType = myForm2.value.propertyType;
+    property2.aboutProperty = myForm2.value.aboutProperty;
+    property2.state = myForm2.value.state;
+    property2.city = myForm2.value.city;
+    property2.locality = myForm2.value.locality;
+    property2.address = myForm2.value.address;
+    this.property.addProperty(property2).subscribe(res => console.log(res));
+  }
 
 
   onThree(myForm3){
@@ -56,6 +65,17 @@ export class AddPropertyComponent implements OnInit {
     this.four=true;
     this.five=false;
     console.log(myForm3.value);
+     var property3 : Property = new Property();
+     property3.selectAddProperty = myForm3.value.selectAddProperty
+     property3.noOfFlats = myForm3.value.noOfFlats
+     property3.availableFor = myForm3.value.availableFor
+     property3.averageArea = myForm3.value.averageArea
+     property3.startingPrice = myForm3.value.startingPrice
+     property3.projectTotalTower = myForm3.value.projectTotalTower
+     property3.projectTotalUnit = myForm3.value.projectTotalUnit
+     property3.projectAvailableUnit = myForm3.value.projectAvailableUnit
+     property3.projectLaunchDate = myForm3.value.projectLaunchDate;
+     this.property.addProperty(property3).subscribe(res => console.log(res));
     }
 
 
