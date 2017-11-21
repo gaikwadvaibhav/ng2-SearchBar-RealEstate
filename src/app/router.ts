@@ -10,7 +10,7 @@ import { AddPropertyComponent } from './add-property/add-property.component';
 
 
 const routes: Routes = [
-    { path: '', redirectTo:'/addproperty', pathMatch:'full' },
+    { path: ' ', redirectTo:'/addproperty', pathMatch:'full' },  
     { path: 'home', component: HomeComponent }, 
     { path: 'search', component: SearchboxComponent },    
     { path: 'register', component: RegisterComponent },

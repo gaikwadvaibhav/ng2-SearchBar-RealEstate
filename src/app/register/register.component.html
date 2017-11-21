@@ -5,48 +5,69 @@
             <div class="card-body">
       <form #myForm="ngForm" novalidate>
           <div class="form-group">
-              <label for="exampleInputEmail1">Name :</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" 
-              aria-describedby="emailHelp" placeholder="Enter Name" required
+              <!-- <label for="exampleInputEmail1">Name :</label> -->
+              <input type="email" class="form-control"   
+               placeholder="Full Name" required
               name="name" ngModel>
              </div>
         <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" 
-          aria-describedby="emailHelp" placeholder="Enter email" required
+           <input type="email" class="form-control"  placeholder="Email" required
           name="email" ngModel>
          </div>
          <div class="form-group">
-            <label for="exampleInputEmail1">Contact No :</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" 
-            aria-describedby="emailHelp" placeholder="Enter Mobile Number" required
+             <input type="email" class="form-control" placeholder="Mobile Number" required
             name="mobile" ngModel>
            </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Password :</label>
-          <input type="password" class="form-control" 
-          id="exampleInputPassword1" placeholder="Password" required
+           <input type="password" class="form-control" placeholder="Password" required
           name="password" ngModel>
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Confirm Password :</label>
-          <input type="password" class="form-control"
-           id="exampleInputPassword1" placeholder="Confirm Password" required
+           <input type="password" class="form-control" placeholder="Confirm Password" required
            name="comfirmpassword"
            ngModel>
         </div>
-        <div > 
-            <label class="radio-inline"><input type="radio" name="optradio" value="agent" required ngModel >Agent</label>
-            <label class="radio-inline"><input type="radio" name="optradio" value="owner" required ngModel>Owner</label>
-            <label class="radio-inline"><input type="radio" name="optradio"  value="builder" required ngModel>Builder</label>
-        </div>
+     <br>
+        <mat-radio-group  name="optradio" class="optpddng"  ngModel ngDefaultControl>
+            <mat-radio-button  value="agent"  >Agent</mat-radio-button> &nbsp;&nbsp;&nbsp;
+            <mat-radio-button  value="owner"  >Owner</mat-radio-button> &nbsp;&nbsp;&nbsp;
+            <mat-radio-button  value="builder" >Builder</mat-radio-button>
+            
+          </mat-radio-group>
+        <br>
         <br>
         <div>
-            <button type="submit" (click)=register(myForm) class="btn btn-primary">Submit</button>          
+            <button type="submit" style="width:-webkit-fill-available;" (click)=register(myForm) class="btn btn-primary">Submit</button>          
         </div>
+          <p > Already have an account ? </p>
+          
+
+          <div style="padding-left: 59px;">
+              <div class="top-nav__auth " style="width: 80%; height: 18px; border-bottom: 1px solid rgb(162, 156, 156); text-align: center">
+                  <span>or</span> 
+              </div>
+           </div>
+<br>
+          <div>
+            <small>             Sign in using
+              </small> <br>
+            <button class="btn btn-facebook">
+              <i class="fa fa-facebook"></i>
+            </button>
+            <button class="btn btn-gplus">
+              <i class="fa fa-google-plus"></i>
+            </button>
+            <button class="btn btn-linkedin">
+              <i class="fa fa-linkedin"></i>
+            </button>
+            
+          </div>
       </form>
     </div>
   </div>
   </div>
   </div>
-  </div>
+  </div>  
+
+
+  

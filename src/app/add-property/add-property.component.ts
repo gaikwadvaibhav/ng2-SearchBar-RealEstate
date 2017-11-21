@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Property } from './property-data';
 import { PropertySerService } from './property-ser.service';
+import { HttpResponse, HttpEventType } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-add-property',
@@ -17,10 +19,31 @@ export class AddPropertyComponent implements OnInit {
 
   constructor( private property: PropertySerService ) { }
 
+
+  selectedFiles: FileList
+  currentFileUpload: File
+  progress: { percentage: number } = { percentage: 0 }
+ 
+
+  selectFile(event) {
+    this.selectedFiles = event.target.files;
+  }
+
   ngOnInit() {
   }
 
 
+  upload() {
+    this.progress.percentage = 0;
+
+    this.currentFileUpload = this.selectedFiles.item(0)
+    // console.log("In Upload fun", this.currentFileUpload);
+    
+    this.property.pushFileToStorage(this.currentFileUpload).subscribe(res =>console.log(res));
+
+
+    this.selectedFiles = undefined
+  }
   onOne(myForm1){
     this.one=false;
     this.two=true;

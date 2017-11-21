@@ -1,4 +1,23 @@
  <br>
+
+
+ <div *ngIf="currentFileUpload" class="progress">
+	<div class="progress-bar progress-bar-info progress-bar-striped"
+		role="progressbar" attr.aria-valuenow="{{progress.percentage}}"
+		aria-valuemin="0" aria-valuemax="100"
+		[ngStyle]="{width:progress.percentage+'%'}">
+		{{progress.percentage}}%</div>
+</div>
+ 
+<label class="btn btn-default">
+	<input type="file" (change)="selectFile($event)">
+</label>
+ 
+<button class="btn btn-success" [disabled]="!selectedFiles"
+	(click)="upload()">Upload</button>
+
+
+
  <div>
     <h5> Submit Your Property</h5>
     <p>Praesent commodo cursus magnavel sceleris quenisl consecte turet </p>
@@ -581,43 +600,41 @@
                                                 <input matInput placeholder="Project Available From Date" name="projectDate" ngModel>
                                         </mat-form-field>
                                          
-                                        <mat-radio-group>
+                                        <mat-radio-group name="transactionType" ngModel ngDefaultControl>
+                                                <div class="row">
                                             <label> <b>  Transaction Type </b> </label>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                        <mat-radio-button value="1" name="newProperty" ngModel ngDefaultControl>New Property</mat-radio-button>                                                        
+                                                 <div class="col-md-6">
+                                                        <mat-radio-button value="newProperty">New Property</mat-radio-button>                                                        
                                                 </div>
                                                 <div class="col-md-6">
-                                                        <mat-radio-button value="2" name="reSale" ngModel ngDefaultControl>Resale</mat-radio-button>                                                        
+                                                        <mat-radio-button value="reSale">Resale</mat-radio-button>                                                        
                                                 </div>
                                             </div>
                                         </mat-radio-group>
-                                                                                
-                                        <mat-radio-group>
-                                                <label> <b> Possession Status </b> </label> 
+                                        <mat-radio-group name="possessionStatus"ngModel ngDefaultControl>
                                                 <div class="row">
+                                                <label> <b> Possession Status </b> </label> 
+                                               
                                                 <div class="col-md-6">
-                                                        <mat-radio-button value="1" name="readyToMove" ngModel ngDefaultControl>Ready to move </mat-radio-button> 
+                                                        <mat-radio-button value="readyToMove">Ready to move </mat-radio-button> 
                                                 </div> 
                                                 <div class="col-md-6">
-                                                        <mat-radio-button value="2" name="underConstruction" ngModel ngDefaultControl>Under Construction</mat-radio-button>                                                    
+                                                        <mat-radio-button value="underConstruction">Under Construction</mat-radio-button>                                                    
                                                 </div>                                              
                                             </div>
                                          </mat-radio-group>
-                                     
-                                 </div>
+                                  </div>
                              </div>
                           <button mat-fab  color="primary"  style="background-color: #2196F3;" (click)="onFour(myForm4)" > NEXT </button>                                   
                         </form>
-                        </div>
+                     </div>
                 </div>
 
    
-                <div class="col-md-6" *ngIf="five">
+    <div class="col-md-6" *ngIf="five">
         <div class="col-md-12">
             <div class="card">
                     <h1 class="page-header"> Success.</h1>
-                    
             </div>
         </div>
     </div>

@@ -16,7 +16,7 @@ export class RegisterComponent implements OnInit {
   }
   
   register(myForm){
-    // console.log(myForm.value);
+    console.log(myForm.value);
     var user : User = new User();
     user.name = myForm.value.name;
     user.email = myForm.value.email;
